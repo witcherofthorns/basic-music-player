@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="author" content="Miroslaw Badurow">
+    <meta name="description" content="Example music player">
+    <link rel = "icon" href = "favicon.png" type = "image/x-icon">
+    <link rel="stylesheet" href="css/styles.css">
+    <link href="css/all.css" rel="stylesheet">
+    <title>Sound Player</title>
+</head>
+
+<body style="background: url('imgs/bg_null.jpg') 0% 0% / cover; background-size: auto;">
+
+    <article class="screen">
+        <input type="checkbox" value="None" id="magicButton" name="check" />
+        <label class="main" for="magicButton"></label>
+
+        <div class="coverImage"></div>
+        <!--<div class="search"></div>-->
+        <div class="bodyPlayer"></div>
+
+        <table class="list" id="audio-list">
+        </table>
+
+        <div class="shadow"></div>
+        <div class="barSlider">
+            <input type="range" min="1" max="100" value="0" class="seek_slider" onchange="seekTo()">
+        </div>
+
+        <div class="info">
+            <h4></h4>
+            <h3 style="font-size: 13px;"></h3>
+        </div>
+        <table class="player">
+            <td><input type="checkbox" id="backward" onclick="setPlayLastTrack()"/><label class="backward" for="backward"></label></td>
+            <td><input type="checkbox" id="play" title="Pause" onclick="togglePlayPause()" /><label class="play" for="play"></label></td>
+            <td><input type="checkbox" id="forward" onclick="setPlayNextTrack()"/><label class="forward" for="forward"></label></td>
+        </table>
+
+        <table class="footer">
+            <td><input type="checkbox" id="love" checked /><label class="love" for="love"></label></td>
+            <td><input type="checkbox" id="shuffle" /><label class="shuffle" for="shuffle"></label></td>
+            <td><input type="checkbox" id="repeat" checked /><label class="repeat" for="repeat"></label></td>
+            <td><input type="checkbox" id="options" /><label class="options" for="options"></label></td>
+        </table>
+
+        <div class="current">
+            <h2 class="text-gradient">MIROSLAW BADUROW</h2>
+        </div>
+
+
+    </article>
+
+<!--
+    <audio preload="auto" id="audio" controls>
+        <source src="audio/pharaoh_печаль_со_знаком_8.mp3">
+    </audio>
+-->
+
+    <script src="js/app.js"></script>
+</body>
+
+</html>
